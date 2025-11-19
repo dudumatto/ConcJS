@@ -87,6 +87,12 @@ async function carregarCarros() {
     });
 }
 
+async function fechar() {
+    document.getElementById("car-list").innerHTML = "";
+}
+async function Fechar() {
+    document.getElementById("mot-list").innerHTML = "";
+}
 
 const motos = [
     {
