@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConcessionariaDAW</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>Concessionária Ramon & Eduardo</header>
+
+    <div class="container">
+        <h2>Carros Disponíveis</h2>
+        <button onclick="carregarCarros()">Carregar Carros da API</button>
+        <div id="car-list"></div>
+        <h2>Motos Disponíveis</h2>
+        <button onclick="carregarMotos()">Carregar Motos da API</button>
+        <div id="mot-list"></div>
+
+        <h2>Simulação de Compra</h2>
+        <form id="formCompra" onsubmit="validarFormulario(event)">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" class="campo" required />
+
+            <label for="modelo">Escolha o modelo:</label>
+            <select id="modelo" onchange="mostrarCampoExtra()" class="campo2">
+                <option value="">Selecione</option>
+                <option value="carro">Carro</option>
+                <option value="moto">Moto</option>
+            </select>
+
+            <div id="extra-field">
+                <label for="cor">Informe a cor desejada:</label>
+                <input type="text" id="cor" class="campo" />
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <h2>Timer</h2>
+        <p id="timer">Carregando timer...</p>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
